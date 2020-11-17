@@ -319,8 +319,14 @@ ul {
   right: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  fill: #000000;
   z-index: 5;
 }
+.close:hover,
+.close:focus {
+  fill: var(--accent-cl);
+}
+
 .features {
   padding-top: 94px;
 }
