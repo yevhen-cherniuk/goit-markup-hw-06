@@ -52,12 +52,33 @@
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <p></p>
           <button class="close" data-modal-close>
             <svg width="11" height="11">
               <use href="./img/modal/sprite2.svg#close"></use>
             </svg>
           </button>
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+          <label for="name" class="modal-label name">Имя</label>
+          <span class="icon">
+            <svg class="man-svg" width="12" height="12">
+              <use href="./img/modal/sprite2.svg#man"></use>
+            </svg>
+          </span>
+          <input class="modal-input name-input" type="text" pattern="^[А-Яа-яЁё\s]+$" name="name" id="name" />
+
+          <label for="phone" class="modal-label phone">Телефон</label>
+          <input type="tel" class="modal-input phone-input" name="phone" id="phone" />
+          <label for="mail" class="modal-label mail">Почта</label>
+          <input type="email" class="modal-input mail-input" name="mail" id="mail" />
+          <label for="message" class="modal-label message">Коментарий</label>
+          <textarea class="modal-input message-input" name="message" id="message" cols="30" rows="10" placeholder="Введите текст"></textarea>
+          <label class="modal-checkbox">
+            <input class="checkbox" type="checkbox" />
+            Соглашаюсь с рассылкой и принимаю
+            <a class="contract" href="">Условия договора</a>
+          </label>
+          <button class="submit">Отправить</button>
         </div>
       </div>
 
