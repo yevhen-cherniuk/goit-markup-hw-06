@@ -325,7 +325,7 @@ ul {
   color: var(--black);
   z-index: 5;
 }
-.icon {
+.icon-man {
   position: absolute;
   left: 52px;
   top: 102px;
