@@ -346,12 +346,15 @@ ul {
 }
 .svg {
   position: absolute;
-  display: block;
+  display: inline-block;
   top: 17px;
   left: 0px;
   padding: 10px;
   fill: var(--black);
   z-index: 5;
+}
+.modal-input:focus + .svg {
+  fill: var(--accent-cl);
 }
 
 .modal-label {
@@ -366,10 +369,11 @@ ul {
   letter-spacing: 0.01em;
   color: var(--main-text-cl);
 }
-.modal-input:focus-within {
+.modal-label:focus-within > .modal-input {
   border: 1px solid var(--accent-cl);
   border-radius: 4px;
   fill: var(--accent-cl);
+  outline: transparent;
 }
 .name {
   top: 75px;
@@ -399,6 +403,7 @@ ul {
   position: absolute;
   display: block;
   margin-top: 4px;
+  padding-left: 40px;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
