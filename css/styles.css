@@ -309,6 +309,25 @@ ul {
   transition: transform 0.5s scale(1) 2s;
   z-index: 4;
 }
+.close {
+  position: absolute;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  fill: #000000;
+  z-index: 5;
+}
+.close:hover,
+.close:focus {
+  fill: var(--accent-cl);
+  cursor: pointer;
+}
+
 .modal-title {
   position: absolute;
   top: 40px;
@@ -328,9 +347,9 @@ ul {
 .svg {
   position: absolute;
   display: block;
-  top: 20px;
+  top: 17px;
   left: 0px;
-  padding: 11px;
+  padding: 10px;
   fill: var(--black);
   z-index: 5;
 }
@@ -418,23 +437,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--accent-cl);
 }
-.close {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  top: 8px;
-  right: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  fill: #000000;
-  z-index: 5;
-}
-.close:hover,
-.close:focus {
-  fill: var(--accent-cl);
-  cursor: pointer;
-}
+
 .submit {
   position: absolute;
   left: 164px;
