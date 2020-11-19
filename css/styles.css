@@ -325,18 +325,19 @@ ul {
   color: var(--black);
   z-index: 5;
 }
-.man {
+.svg {
   position: absolute;
-  left: 52px;
-  top: 102px;
-
+  display: block;
+  top: 20px;
+  left: 0px;
+  padding: 11px;
+  fill: var(--black);
   z-index: 5;
 }
-.man-svg {
-  fill: var(--black);
-}
+
 .modal-label {
   position: absolute;
+  display: block;
   left: 40px;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -346,11 +347,16 @@ ul {
   letter-spacing: 0.01em;
   color: var(--main-text-cl);
 }
+.modal-input:focus-within {
+  border: 1px solid var(--accent-cl);
+  border-radius: 4px;
+  fill: var(--accent-cl);
+}
 .name {
   top: 75px;
 }
 .phone {
-  top: 138px;
+  top: 143px;
 }
 .mail {
   top: 211px;
@@ -372,27 +378,21 @@ ul {
 }
 .modal-input {
   position: absolute;
-  left: 40px;
+  display: block;
+  margin-top: 4px;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
-.name-input {
-  top: 93px;
-}
-.phone-input {
-  top: 156px;
-}
-.mail-input {
-  top: 229px;
-}
+
 .modal-input.message-input {
-  position: absolute;
-  bottom: 164px;
-  width: 448px;
   height: 120px;
+  padding: 12px 16px;
+}
+
+.message-input::placeholder {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
