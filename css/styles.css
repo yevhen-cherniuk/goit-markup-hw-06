@@ -575,6 +575,10 @@ ul {
   width: 570px;
   height: 86;
 }
+.subscribe-form {
+  display: flex;
+  flex-direction: row;
+}
 .mail-input {
   position: absolute;
   bottom: 0;
@@ -618,11 +622,25 @@ ul {
   color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  outline: transparent;
+  border-color: transparent;
 }
 .send-svg {
   margin-left: 10px;
   fill: var(--white);
+}
+.btn-send:hover .send-svg,
+.btn-send:focus .send-svg {
+  fill: var(--accent-cl);
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
+.btn-send:hover,
+.btn-send:focus {
+  background-color: var(--white);
+  color: var(--accent-cl);
+  cursor: pointer;
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
 }
 
 /* Оформление модалки и бекдропа  */
@@ -679,6 +697,8 @@ ul {
 .close:focus {
   fill: var(--accent-cl);
   cursor: pointer;
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
 }
 
 .modal-title {
@@ -696,18 +716,6 @@ ul {
   letter-spacing: 0.03em;
   color: var(--black);
   z-index: 5;
-}
-.svg {
-  position: absolute;
-  display: inline-block;
-  top: 17px;
-  left: 0px;
-  padding: 10px;
-  fill: var(--black);
-  z-index: 5;
-}
-.modal-input:focus + .svg {
-  fill: var(--accent-cl);
 }
 
 .modal-label {
@@ -740,18 +748,7 @@ ul {
 .message {
   top: 279px;
 }
-.modal-checkbox {
-  position: absolute;
-  left: 77px;
-  bottom: 120px;
-  font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--main-text-cl);
-}
+
 .modal-input {
   position: absolute;
   display: block;
@@ -763,30 +760,86 @@ ul {
   box-sizing: border-box;
   border-radius: 4px;
 }
+.svg {
+  position: absolute;
+  display: inline-block;
+  top: 17px;
+  left: 0px;
+  padding: 10px;
+  fill: var(--black);
+  z-index: 5;
+}
+.modal-input:hover {
+  cursor: pointer;
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
+.modal-input:focus + .svg {
+  fill: var(--accent-cl);
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
 
 .modal-input.message-input {
   height: 120px;
   padding: 12px 16px;
+  resize: none;
 }
 
 .message-input::placeholder {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.checkbox {
+.modal-checkbox {
   position: absolute;
+  display: inline-flex;
+  align-items: center;
+  left: 77px;
+  bottom: 120px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-cl);
+}
+.check-input {
+  position: absolute;
+}
+.check-box {
+  position: absolute;
+  left: -23px;
+  display: inline-block;
   width: 16px;
   height: 15px;
-  left: -25px;
-  bottom: 5px;
+  margin-right: 9px;
+  border: 2px solid var(--black);
+  border-radius: 2px;
 }
-
+.check-input:checked + .check-box {
+  border-color: transparent;
+  background-color: var(--accent-cl);
+  background-image: url('../img/modal/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
+.check-input:checked:focus + .check-box {
+  background-color: var(--accent-cl);
+  fill: var(--white);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
 .contract {
+  padding-left: 3px;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -795,7 +848,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--accent-cl);
 }
-.submit {
+.btn-submit {
   position: absolute;
   left: 164px;
   bottom: 40px;
@@ -813,6 +866,13 @@ ul {
   border-radius: 4px;
   border: transparent;
 }
+.btn-submit:hover,
+.btn-submit:focus {
+  cursor: pointer;
+  transition-duration: var(--time);
+  transition-timing-function: var(--timing-function);
+}
+
 /* Оформление портфолио */
 .menu-filters {
   display: flex;
