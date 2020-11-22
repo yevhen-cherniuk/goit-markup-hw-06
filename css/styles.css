@@ -494,8 +494,11 @@ ul {
 }
 .footer-conteiner {
   display: flex;
+  justify-content: space-between;
 }
 .footer-title {
+  position: absolute;
+  left: 0;
   margin-bottom: 20px;
   display: inline-block;
   font-family: Roboto;
@@ -541,10 +544,19 @@ ul {
   margin-bottom: 9px;
 }
 .footer-social-links {
+  position: relative;
+  display: flex;
   padding-top: 12px;
   margin-left: 70px;
   width: 206px;
   height: 80;
+}
+.footer-list.social-icons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 28px;
+  left: 0;
 }
 .footer-social-icons-link {
   display: inline-flex;
@@ -570,6 +582,7 @@ ul {
 .footer-subscribe {
   position: relative;
   display: flex;
+  justify-content: flex-end;
   padding-top: 15px;
   margin-left: 93px;
   width: 570px;
@@ -587,6 +600,13 @@ ul {
   height: 50px;
   margin-bottom: 40px;
   padding-left: 16px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
